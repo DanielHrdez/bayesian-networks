@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network5" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="st">
+			<state id="Attack" />
+			<state id="grab_weapon" />
+			<state id="grab_energy" />
+			<state id="explore" />
+			<state id="run_away" />
+			<state id="detect_danger" />
+			<probabilities>0.2608695652173913 0.2173913043478261 0.1739130434782609 0.08695652173913043 0.04347826086956522 0.2173913043478262</probabilities>
+		</cpt>
+		<cpt id="st_1">
+			<state id="Attack" />
+			<state id="grab_weapon" />
+			<state id="grab_energy" />
+			<state id="explore" />
+			<state id="run_away" />
+			<state id="detect_danger" />
+			<parents>st</parents>
+			<probabilities>0.3333333333333333 0.1428571428571428 0.1428571428571428 0.04761904761904762 0 0.3333333333333333 0.3181818181818182 0 0.1818181818181818 0.1818181818181818 0.04545454545454546 0.2727272727272727 0.1818181818181818 0.2727272727272727 0 0.09090909090909091 0.1818181818181818 0.2727272727272727 0.04347826086956522 0.3043478260869565 0.3043478260869565 0.2173913043478261 0.04347826086956522 0.08695652173913049 0 0.0625 0.125 0 0.4375 0.375 0.3684210526315789 0.05263157894736842 0.05263157894736842 0.05263157894736842 0.2105263157894737 0.2631578947368421</probabilities>
+		</cpt>
+		<cpt id="Health">
+			<state id="high" />
+			<state id="low" />
+			<parents>st_1</parents>
+			<probabilities>0.9 0.1 0.5 0.5 0.1 0.9 0.4 0.6 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Weapon">
+			<state id="armed" />
+			<state id="disarmed" />
+			<parents>st_1</parents>
+			<probabilities>1 0 0 1 0.5 0.5 0.3 0.7 0.2 0.8 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Oponent_weapon">
+			<state id="armed" />
+			<state id="disarmed" />
+			<parents>st_1</parents>
+			<probabilities>0.3 0.7 0.3 0.7 0.3 0.7 0.3 0.7 0.7 0.3 1 0</probabilities>
+		</cpt>
+		<cpt id="HN">
+			<state id="yes" />
+			<state id="no" />
+			<parents>st_1</parents>
+			<probabilities>0.9 0.1 0.4 0.6 0.4 0.6 0.2 0.8 0.1 0.9 0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="Number_enemies">
+			<state id="yes" />
+			<state id="no" />
+			<parents>st_1</parents>
+			<probabilities>1 0 0.2 0.8 0.2 0.8 0.1 0.9 0 1 0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="proximity_weapon">
+			<state id="yes" />
+			<state id="no" />
+			<parents>st_1</parents>
+			<probabilities>0.5 0.5 1 0 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="proximity_health">
+			<state id="yes" />
+			<state id="no" />
+			<parents>st_1</parents>
+			<probabilities>0.5 0.5 0.5 0.5 1 0 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 3.0.6518.0 ACADEMIC" name="seminario">
+			<node id="st">
+				<name>st</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>178 402 337 510</position>
+				<barchart active="true" width="128" height="126" />
+			</node>
+			<node id="Health">
+				<name>Health</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>232 191 400 283</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Weapon">
+				<name>Weapon</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>413 127 561 222</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Oponent_weapon">
+				<name>Oponent_weapon</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>597 143 729 220</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="HN">
+				<name>HN</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>763 182 879 255</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Number_enemies">
+				<name>Number_enemies</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>882 284 1019 365</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="proximity_weapon">
+				<name>proximity_weapon</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>841 389 972 461</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="proximity_health">
+				<name>proximity_health</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>796 489 921 578</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="st_1">
+				<name>st+1</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>418 385 577 493</position>
+				<barchart active="true" width="128" height="126" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
